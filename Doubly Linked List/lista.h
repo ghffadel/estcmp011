@@ -126,4 +126,14 @@ void imprimir_dois_sentidos (No *lista) {
   printf("\n");
 }
 
+void liberar_memoria (No **lista) {
+  No *anterior, *atual = *lista;
+
+  while (atual != NULL) {
+    anterior = atual; atual = atual->proximo; free(anterior);
+  }
+
+  *lista = NULL;
+}
+
 # endif // LISTA_H_INCLUDED
