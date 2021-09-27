@@ -27,7 +27,7 @@ int main () {
   printf("Pares: "); imprimir(pares);
   printf("Impares: "); imprimir(impares);
 
-  free(pares); free(impares);
+  liberar_memoria(&pares); liberar_memoria(&impares);
 
   return 0;
 }
